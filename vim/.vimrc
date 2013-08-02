@@ -1,17 +1,36 @@
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
 set nocompatible
+
+set modelines=0
 
 execute pathogen#infect()
 
 syntax on
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
+
+set encoding=utf-8
+set scrolloff=3
 set autoindent
+set showmode
 set backup
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
 set ruler
 set showcmd
+set laststatus=2
+set relativenumber
+set undofile
 set incsearch
 set hlsearch
 set backspace=indent,eol,start
@@ -21,24 +40,84 @@ set number
 :au WinEnter * :setlocal number
 :au WinLeave * :setlocal nonumber
 
-"Automatically resize vertical splits
-:au WinEnter * :set winfixheight
-:au WinEnter * :wincmd =
-
-set ruler
 set modeline
-set modelines=3
 set nobackup
 set nowritebackup
 set list
 set cpoptions+=$
 
-filetype plugin indent on
+let mapleader = ","
 
-noremap <esc> :nohl<cr> :BuffergatorClose<cr>
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set showmatch
+
+nnoremap <esc> :nohl<cr> :BuffergatorClose<cr>
+
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+set list
+set listchars=tab:▸\ ,eol:¬
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+nnoremap ; :
+
+au FocusLost * :wa
 
 " Remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+nnoremap <leader>a :Ack
+
+" HTML Fold Tag
+nnoremap <leader>ft Vatzf
+
+" Sort CSS properties
+nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+
+" Use ,v to reselect text that was just pasted
+nnoremap <leader>v V`]
+
+" Open up .vimrc file in a new, vertically split window
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" Map jj to the <ESC> key.
+inoremap jj <ESC>
+
+" Make ,w split window vertically then focus on new window
+nnoremap <leader>w <C-w>v<C-w>l
+
+" Make ,e split window horizontally then focus on new window
+nnoremap <leader>e <C-w>s<C-w>j
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Rename the current file
 function! RenameFile()
