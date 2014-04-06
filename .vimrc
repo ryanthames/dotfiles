@@ -1,18 +1,20 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 filetype plugin indent on
 
+" vi is old, no need for compatibility
 set nocompatible
 
+" prevents certain security exploits
 set modelines=0
 
 execute pathogen#infect()
 
 syntax on
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 set encoding=utf-8
@@ -30,13 +32,15 @@ set ruler
 set showcmd
 set laststatus=2
 set relativenumber
+
+" Creates a <FILENAME>.un~ to undo changes even after closing/reopening a file
 set undofile
+
 set incsearch
 set hlsearch
 set backspace=indent,eol,start
 
 " Always show line numbers, but only in current window
-set number
 :au WinEnter * :setlocal number
 :au WinLeave * :setlocal nonumber
 
@@ -46,24 +50,35 @@ set nowritebackup
 set list
 set cpoptions+=$
 
+
 let mapleader = ","
 
+" essentially turns off vim's default regex handling
 nnoremap / /\v
 vnoremap / /\v
+
+" ignores case unless one or more letters are uppercase
 set ignorecase
 set smartcase
+
+" applies substitutions globally on lines
 set gdefault
+
 set showmatch
 
 nnoremap <esc> :nohl<cr> :BuffergatorClose<cr>
 
+" makes it very simple to clear highlighting after done with searching
 nnoremap <leader><space> :noh<cr>
+
 nnoremap <tab> %
 vnoremap <tab> %
 
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+
+" Sets a color at column 85 so I know when a line is getting too long
 set colorcolumn=85
 
 set list
@@ -84,11 +99,13 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" don't have to press the shift key in order to save a file, etc
 nnoremap ; :
 
+" saves a files after losing focus (i.e. tabbing away)
 au FocusLost * :wa
 
-" Remove trailing whitespace
+" Remove trailing whitespace from a file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 nnoremap <leader>a :Ack
@@ -134,4 +151,8 @@ map <leader>rf :call RenameFile()<cr>
 
 map <leader>n :NERDTreeToggle<cr>
 
+" For whatever reason, vim thinks iTerm only supports 8 colors. This allows vim
+" to use colorthemes
+let &t_Co=256
 colorscheme molokai
+
