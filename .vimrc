@@ -41,8 +41,8 @@ set hlsearch
 set backspace=indent,eol,start
 
 " Always show line numbers, but only in current window
-:au WinEnter * :setlocal number
-:au WinLeave * :setlocal nonumber
+:au WinEnter * :setlocal relativenumber
+:au WinLeave * :setlocal norelativenumber
 
 set modeline
 set nobackup
