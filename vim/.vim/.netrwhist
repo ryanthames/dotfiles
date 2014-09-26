@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/ryanthames/test_code/rails/store/app'
-let g:netrw_dirhist_2='/Users/ryanthames/test_code/rails/store/app/helpers'
-let g:netrw_dirhist_3='/Users/ryanthames/test_code/rails/store/app'
-let g:netrw_dirhist_4='/Users/ryanthames/test_code/rails/store/app/models'
-let g:netrw_dirhist_5='/Users/ryanthames/Dropbox/Code/home_inventory'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/ryanthames/Dropbox/Code/exercism/ruby/rna-transcription'
+let g:netrw_dirhist_2='/Users/ryanthames/Dropbox/Code/chs_inventory'
+let g:netrw_dirhist_3='/Users/ryanthames/Dropbox/Code/exercism/clojure/bob'
+let g:netrw_dirhist_4='/Users/ryanthames/Dropbox/Code/tvn'
+let g:netrw_dirhist_5='/Users/ryanthames/test_code'
+let g:netrw_dirhist_6='/Users/ryanthames/Dropbox/Code/chs_inventory'
