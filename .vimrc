@@ -154,7 +154,7 @@ map <leader>n :NERDTreeToggle<cr>
 " For whatever reason, vim thinks iTerm only supports 8 colors. This allows vim
 " to use colorthemes
 let &t_Co=256
-colorscheme molokai
+" colorscheme molokai
 
 " Tab autocomplete unless at beginning of line
 function! InsertTabWrapper()
