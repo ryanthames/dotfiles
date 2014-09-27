@@ -131,6 +131,12 @@ nnoremap <leader>w <C-w>v<C-w>l
 " Make ,e split window horizontally then focus on new window
 nnoremap <leader>e <C-w>s<C-w>j
 
+" Ultisnips config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
