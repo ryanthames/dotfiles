@@ -5,12 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="thames"
+ZSH_THEME="bureau"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
+
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -47,7 +49,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=$PATH:/Users/ryanthames/.rvm/gems/ruby-2.0.0-p195/bin:/Users/ryanthames/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/ryanthames/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/ryanthames/.rvm/bin:/usr/local/bin:/Users/ryanthames/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/bin:$JAVA_HOME:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Tell ls to be colourful
@@ -55,3 +57,6 @@ export CLICOLOR=1
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
+
+export NVM_DIR="/Users/ryanthames/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
