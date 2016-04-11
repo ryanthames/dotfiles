@@ -136,6 +136,12 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+" indentLine config
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '│'
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -160,7 +166,8 @@ map <leader>n :NERDTreeToggle<cr>
 " For whatever reason, vim thinks iTerm only supports 8 colors. This allows vim
 " to use colorthemes
 let &t_Co=256
-" colorscheme molokai
+colorscheme molokai
+"colorscheme ubloh
 
 " Tab autocomplete unless at beginning of line
 function! InsertTabWrapper()
