@@ -1,1 +1,3 @@
-A repo with various config files. Feel free to fork.
+My dootfiles
+
+![doot](http://i.imgur.com/FpvGJo3.png)
