@@ -1,3 +1,9 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
+[submodule "vim/.vim/bundle/vim-notes"]
+	path = vim/.vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
+[submodule "vim/.vim/bundle/vim-misc"]
+	path = vim/.vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
