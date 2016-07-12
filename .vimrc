@@ -186,3 +186,4 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 
 let g:notes_directories = ['~/Dropbox/notes']
+let g:notes_suffix = '.md'
