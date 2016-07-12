@@ -1,4 +1,4 @@
-filetype off
+
 call pathogen#incubate()
 filetype plugin indent on
 
@@ -184,3 +184,5 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
+
+let g:notes_directories = ['~/Dropbox/notes']
