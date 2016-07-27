@@ -7,3 +7,36 @@
 [submodule "vim/.vim/bundle/vim-misc"]
 	path = vim/.vim/bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "vim/.vim/bundle/ack.vim"]
+	path = vim/.vim/bundle/ack.vim
+  url = https://github.com/mileszs/ack.vim
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim
+[submodule "vim/.vim/bundle/indentLine"]
+	path = vim/.vim/bundle/indentLine
+  url = https://github.com/Yggdroot/indentLine
+[submodule "vim/.vim/bundle/nerdcommenter"]
+	path = vim/.vim/bundle/nerdcommenter
+  url = https://github.com/scrooloose/nerdcommenter
+[submodule "vim/.vim/bundle/ultisnips"]
+	path = vim/.vim/bundle/ultisnips
+  url = https://github.com/SirVer/ultisnips
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+  url = https://github.com/vim-airline/vim-airline
+[submodule "vim/.vim/bundle/vim-buffergator.vim"]
+	path = vim/.vim/bundle/vim-buffergator.vim
+  url = https://github.com/jeetsukumaran/vim-buffergator
+[submodule "vim/.vim/bundle/vim-clojure-highlight"]
+	path = vim/.vim/bundle/vim-clojure-highlight
+  url = https://github.com/guns/vim-clojure-highlight
+[submodule "vim/.vim/bundle/vim-clojure-static"]
+	path = vim/.vim/bundle/vim-clojure-static
+  url = https://github.com/guns/vim-clojure-static
+[submodule "vim/.vim/bundle/vim-fireplace"]
+	path = vim/.vim/bundle/vim-fireplace
+  url = https://github.com/tpope/vim-fireplace
+[submodule "vim/.vim/bundle/vim-snippets"]
+	path = vim/.vim/bundle/vim-snippets
+  url = https://github.com/honza/vim-snippets
