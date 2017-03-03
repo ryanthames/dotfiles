@@ -11,8 +11,13 @@ ZSH_THEME="thames"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
+alias vim="nvim"
 
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home'
+
+# Stripe api keys
+export PUBLISHABLE_KEY='pk_test_bYRkD4NexYR1CZ5aISp7SQ8k'
+export SECRET_KEY='sk_test_wO9TotXIwXoL80h5MqSlZsDe'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -60,3 +65,9 @@ export GREP_OPTIONS='--color=auto'
 
 export NVM_DIR="/Users/ryanthames/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin"
+
+# added by travis gem
+[ -f /Users/ryanthames/.travis/travis.sh ] && source /Users/ryanthames/.travis/travis.sh
