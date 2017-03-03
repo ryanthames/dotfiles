@@ -40,3 +40,9 @@
 [submodule "vim/.vim/bundle/vim-elixir"]
 	path = vim/.vim/bundle/vim-elixir
   url = https://github.com/elixir-lang/vim-elixir
+[submodule "nvim/plugged/alchemist.vim"]
+	path = nvim/plugged/alchemist.vim
+  url = https://github.com/slashmili/alchemist.vim
+[submodule "nvim/plugged/phoenix.vim"]
+	path = nvim/plugged/phoenix.vim
+  url = https://github.com/c-brenn/phoenix.vim
