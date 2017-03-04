@@ -49,6 +49,12 @@ nnoremap <leader>w <C-w>v<C-w>l¬
 " Make ,e split window horizontally then focus on new window¬
 nnoremap <leader>e <C-w>s<C-w>j¬
 
+" Make it easier to navigate split windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
