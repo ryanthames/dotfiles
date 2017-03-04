@@ -46,3 +46,12 @@
 [submodule "nvim/plugged/phoenix.vim"]
 	path = nvim/plugged/phoenix.vim
   url = https://github.com/c-brenn/phoenix.vim
+[submodule "nvim/plugged/vim-projectionist"]
+	path = nvim/plugged/vim-projectionist
+  url = https://github.com/tpope/vim-projectionist
+[submodule "nvim/plugged/deoplete.nvim"]
+	path = nvim/plugged/deoplete.nvim
+  url = https://github.com/Shougo/deoplete.nvim
+[submodule "nvim/plugged/neomake"]
+	path = nvim/plugged/neomake
+  url = https://github.com/neomake/neomake
