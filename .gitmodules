@@ -55,3 +55,9 @@
 [submodule "nvim/plugged/neomake"]
 	path = nvim/plugged/neomake
   url = https://github.com/neomake/neomake
+[submodule "nvim/plugged/molokai"]
+	path = nvim/plugged/molokai
+  url = https://github.com/tomasr/molokai
+[submodule "nvim/plugged/vim-polyglot"]
+	path = nvim/plugged/vim-polyglot
+  url = https://github.com/sheerun/vim-polyglot
