@@ -1,129 +1,135 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-export DEFAULT_USER='ryan.thames'
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/ryan/.oh-my-zsh"
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_beginning"
-POWERLEVEL9K_RVM_BACKGROUND="black"
-POWERLEVEL9K_RVM_FOREGROUND="249"
-POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
-POWERLEVEL9K_TIME_BACKGROUND="black"
-POWERLEVEL9K_TIME_FOREGROUND="249"
-POWERLEVEL9K_TIME_FORMAT="\UF43A %D{%H:%M  \UF133  %d.%m.%y}"
-POWERLEVEL9K_RVM_BACKGROUND="black"
-POWERLEVEL9K_RVM_FOREGROUND="249"
-POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="red"
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='cyan'
-POWERLEVEL9K_FOLDER_ICON=''
-POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
-POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
-POWERLEVEL9K_VCS_COMMIT_ICON="\uf417"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{cyan}\u256D\u2500%F{white}"
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%F{cyan}\u2570\uf460%F{white} "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon ssh root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status battery disk_usage time)
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-ENABLE_CORRECTION="false"
-HIST_STAMPS="mm/dd/yyyy"
-plugins=(git git-extras gem bundler osx ruby rvm rails sudo sublime colorize history history-substring-search last-working-dir compleat zsh-completions zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting zsh-syntax-highlighting-filetypes warhol)
-autoload -U compinit && compinit
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
 
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+# User configuration
 
+# export MANPATH="/usr/local/man:$MANPATH"
 
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi="vim"
-alias vim="nvim"
+export PATH=$(brew --prefix)/bin:$PATH
+plugins=(git)
+eval "$(starship init zsh)"
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home'
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Stripe api keys
-export PUBLISHABLE_KEY='pk_test_bYRkD4NexYR1CZ5aISp7SQ8k'
-export SECRET_KEY='sk_test_wO9TotXIwXoL80h5MqSlZsDe'
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+source /Users/ryan/.docker/init-zsh.sh || true # Added by Docker Desktop
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Created by `pipx` on 2025-04-14 22:42:47
+export PATH="$PATH:/Users/ryan/.local/bin"
 
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem)
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-#export PATH=$PATH:/Users/ryanthames/.rvm/gems/ruby-2.0.0-p195/bin:/Users/ryanthames/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/ryanthames/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/ryanthames/.rvm/bin:/usr/local/bin:/Users/ryanthames/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH="/usr/local/bin:$HOME/bin:$JAVA_HOME:$PATH:$HOME/Library/Python/2.7/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Powerline
-. /Users/ryan.thames/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-
-# Tell ls to be colourful
-export CLICOLOR=1
-
-# Tell grep to highlight matches
-export GREP_OPTIONS='--color=auto'
-
-export NVM_DIR="/Users/ryanthames/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin"
-
-# added by travis gem
-[ -f /Users/ryanthames/.travis/travis.sh ] && source /Users/ryanthames/.travis/travis.sh
+alias amp="npx @sourcegraph/amp"
